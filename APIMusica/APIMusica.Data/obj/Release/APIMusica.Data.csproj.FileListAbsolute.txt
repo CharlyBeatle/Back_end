@@ -1,0 +1,6 @@
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\bin\Release\APIMusica.Data.dll
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\bin\Release\APIMusica.Data.pdb
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\obj\Release\APIMusica.Data.csprojAssemblyReference.cache
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\obj\Release\APIMusica.Data.csproj.CoreCompileInputs.cache
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\obj\Release\APIMusica.Data.dll
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Data\obj\Release\APIMusica.Data.pdb

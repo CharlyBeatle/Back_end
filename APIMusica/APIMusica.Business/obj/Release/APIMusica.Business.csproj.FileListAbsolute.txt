@@ -1,0 +1,6 @@
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\bin\Release\APIMusica.Business.dll
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\bin\Release\APIMusica.Business.pdb
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Release\APIMusica.Business.csprojAssemblyReference.cache
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Release\APIMusica.Business.csproj.CoreCompileInputs.cache
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Release\APIMusica.Business.dll
+C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Release\APIMusica.Business.pdb
