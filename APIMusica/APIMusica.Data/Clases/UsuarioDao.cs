@@ -19,10 +19,10 @@ namespace APIMusica.Data.Clases
                     result = context.Usuario.ToList();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
             return result;
@@ -38,10 +38,10 @@ namespace APIMusica.Data.Clases
                     result = context.Usuario.FirstOrDefault(x => x.IdUsuario == user);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
             return result;
@@ -57,9 +57,11 @@ namespace APIMusica.Data.Clases
                     user.Nombres = model.Nombres;
                     user.Apellidos = model.Apellidos;
                     user.Correo = model.Correo;
+                    user.Estado = model.Estado;
                 }
                 else
                 {
+                    model.Estado = true;
                     context.Usuario.Add(model);
                 }
 

@@ -4,3 +4,15 @@ C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Busin
 C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Business.pdb
 C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.dll
 C:\Users\Javi\Documents\Programas\Carlitos\Back-Musica\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.pdb
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Business.dll
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Business.pdb
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Data.dll
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\EntityFramework.dll
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Data.pdb
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\APIMusica.Data.dll.config
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\bin\Debug\EntityFramework.xml
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.csprojAssemblyReference.cache
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.csproj.CoreCompileInputs.cache
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.csproj.CopyComplete
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.dll
+C:\Users\Javi\Documents\MUSICA\Back\APIMusica\APIMusica.Business\obj\Debug\APIMusica.Business.pdb

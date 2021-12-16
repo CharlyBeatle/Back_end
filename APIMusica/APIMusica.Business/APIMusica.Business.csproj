@@ -42,14 +42,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsDictado.cs" />
+    <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\Dictado.cs" />
     <Compile Include="DTO\Figura.cs" />
     <Compile Include="DTO\Metrica.cs" />
+    <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Enums\MetricaEnum.cs" />
     <Compile Include="Enums\FiguraEnum.cs" />
     <Compile Include="Enums\NotaEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\APIMusica.Data\APIMusica.Data.csproj">
+      <Project>{326435C6-5DFA-4895-8CE2-CC4BCB5CC485}</Project>
+      <Name>APIMusica.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

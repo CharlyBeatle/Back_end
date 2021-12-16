@@ -35,6 +35,10 @@ namespace APIMusica.Data.Model
 
         public bool Estado { get; set; }
 
+        [Required]
+        [StringLength(20)]
+        public string Password { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dictado> Dictado { get; set; }
 
