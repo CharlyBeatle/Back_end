@@ -42,11 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsDictado.cs" />
+    <Compile Include="Clases\ClsPerfil.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\Dictado.cs" />
     <Compile Include="DTO\Figura.cs" />
     <Compile Include="DTO\Metrica.cs" />
+    <Compile Include="DTO\PerfilDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Enums\MetricaEnum.cs" />
     <Compile Include="Enums\FiguraEnum.cs" />

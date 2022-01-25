@@ -10,6 +10,7 @@ namespace APIMusica.Business.DTO
     public class Figura
     {
         public FiguraEnum IndiceFigura { get; set; }
+        public string NombreFigura { get; set; }
         public double Valor { get; set; }
 
     }

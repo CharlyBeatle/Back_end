@@ -12,10 +12,10 @@ namespace APIMusica.Business.Enums
         {
             ValorMetrica = "2/4",
             Figuras = new List<Figura> {
-                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  Valor = 0.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Negra,  Valor = 1 },
-                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  Valor = 1.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  Valor = 2 }
+                 new Figura {  IndiceFigura = FiguraEnum.Corchea, NombreFigura = "Semi Corchea",  Valor = 0.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Negra, NombreFigura = "Corchea",  Valor = 1 },
+                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo, NombreFigura = "Corchea Puntillo",  Valor = 1.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Blanca,NombreFigura = "Negra",  Valor = 2 }
             }
         };
 
@@ -26,11 +26,11 @@ namespace APIMusica.Business.Enums
         {
             ValorMetrica = "3/4",
             Figuras = new List<Figura> {
-                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  Valor = 0.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Negra,  Valor = 1 },
-                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  Valor = 1.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  Valor = 2 },
-                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  Valor = 3 }
+                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  NombreFigura = "Corchea",Valor = 0.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Negra,  NombreFigura = "Negra",Valor = 1 },
+                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  NombreFigura = "Negra Puntillo",Valor = 1.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  NombreFigura = "Blanca",Valor = 2 },
+                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  NombreFigura = "Blanca Puntillo",Valor = 3 }
             }
         };
 
@@ -41,11 +41,11 @@ namespace APIMusica.Business.Enums
         {
             ValorMetrica = "2/2",
             Figuras = new List<Figura> {
-                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  Valor = 0.25 },
-                 new Figura {  IndiceFigura = FiguraEnum.Negra,  Valor = 0.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  Valor = 1 },
-                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  Valor = 1.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Redonda,  Valor = 2 }
+                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  NombreFigura = "Corchea",Valor = 0.25 },
+                 new Figura {  IndiceFigura = FiguraEnum.Negra,  NombreFigura = "Negra",Valor = 0.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Blanca, NombreFigura = "Blanca", Valor = 1 },
+                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  NombreFigura = "Blanca Puntillo",Valor = 1.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Redonda,  NombreFigura = "Redonda",Valor = 2 }
             }
         };
 
@@ -56,12 +56,12 @@ namespace APIMusica.Business.Enums
         {
             ValorMetrica = "4/4",
             Figuras = new List<Figura> {
-                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  Valor = 0.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Negra,  Valor = 1 },
-                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  Valor = 1.5 },
-                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  Valor = 2 },
-                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  Valor = 3 },
-                 new Figura {  IndiceFigura = FiguraEnum.Redonda,  Valor = 4 }
+                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  NombreFigura = "Corchea",Valor = 0.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Negra,  NombreFigura = "Negra",Valor = 1 },
+                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  NombreFigura = "Negra Puntillo",Valor = 1.5 },
+                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  NombreFigura = "Blanca",Valor = 2 },
+                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  NombreFigura = "Blanca Puntillo",Valor = 3 },
+                 new Figura {  IndiceFigura = FiguraEnum.Redonda,  NombreFigura = "Redonda",Valor = 4 }
             }
         };
 
@@ -72,11 +72,11 @@ namespace APIMusica.Business.Enums
         {
             ValorMetrica = "6/8",
             Figuras = new List<Figura> {
-                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  Valor = 1 },
-                 new Figura {  IndiceFigura = FiguraEnum.Negra,  Valor = 2 },
-                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  Valor = 3 },
-                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  Valor = 4 },
-                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  Valor = 6 }
+                 new Figura {  IndiceFigura = FiguraEnum.Corchea,  NombreFigura = "Corchea",Valor = 1 },
+                 new Figura {  IndiceFigura = FiguraEnum.Negra,  NombreFigura = "Negra",Valor = 2 },
+                 new Figura {  IndiceFigura = FiguraEnum.NegraPuntillo,  NombreFigura = "Negra Puntillo",Valor = 3 },
+                 new Figura {  IndiceFigura = FiguraEnum.Blanca,  NombreFigura = "Blanca",Valor = 4 },
+                 new Figura {  IndiceFigura = FiguraEnum.BlancaPuntillo,  NombreFigura = "Blanca Puntillo",Valor = 6 }
             }
         };
 

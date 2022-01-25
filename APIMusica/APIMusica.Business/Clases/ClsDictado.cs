@@ -25,8 +25,11 @@
             dictado.Compas = new List<string>();
             var metrica = GenerarMetrica(dificultad);
             dictado.Metrica = metrica.ValorMetrica;
+            dictado.MetricaNotas = metrica;
             var cantidadCompas = ObtenerCantidadCompas(dificultad);
+            dictado.CantidadCompas = cantidadCompas;
             var nota = GenerarNota();
+            dictado.Nota = nota;
             dictado.TextoDictado = string.Format("M: {0} \n| ",dictado.Metrica);
             for (int i = 0; i < cantidadCompas; i++)
             {

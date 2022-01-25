@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Clases\DictadoDao.cs" />
     <Compile Include="Clases\GeneralesDao.cs" />
+    <Compile Include="Clases\PerfilDao.cs" />
     <Compile Include="Clases\UsuarioDao.cs" />
     <Compile Include="Model\Dictado.cs" />
     <Compile Include="Model\MusicaEntities.cs" />
