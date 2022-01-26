@@ -52,9 +52,10 @@ namespace APIMusica.Data.Clases
             using (var context = new MusicaEntities())
             {
                 var user = context.Usuario.FirstOrDefault(x => x.IdUsuario == model.IdUsuario);
-                if (user.IdUsuario != "")
+                if (user != null)
                 {
                     user.Nombres = model.Nombres;
+                    user.IdPerfil = model.IdPerfil;
                     user.Apellidos = model.Apellidos;
                     user.Correo = model.Correo;
                     user.Estado = model.Estado;

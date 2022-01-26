@@ -16,10 +16,13 @@ namespace APIMusica.Data.Model
         [StringLength(20)]
         public string IdUsuario { get; set; }
 
-        [Column("Dictado")]
         [Required]
-        [StringLength(800)]
-        public string Dictado1 { get; set; }
+        [StringLength(8000)]
+        public string Original { get; set; }
+
+        [Required]
+        [StringLength(8000)]
+        public string Respuesta { get; set; }
 
         public bool Calificacion { get; set; }
 

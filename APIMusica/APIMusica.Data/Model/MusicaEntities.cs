@@ -24,7 +24,11 @@ namespace APIMusica.Data.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Dictado>()
-                .Property(e => e.Dictado1)
+                .Property(e => e.Original)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Dictado>()
+                .Property(e => e.Respuesta)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Nivel>()

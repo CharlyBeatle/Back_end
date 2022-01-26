@@ -46,6 +46,7 @@
     <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\Dictado.cs" />
+    <Compile Include="DTO\DictadoRespuesta.cs" />
     <Compile Include="DTO\Figura.cs" />
     <Compile Include="DTO\Metrica.cs" />
     <Compile Include="DTO\PerfilDTO.cs" />
@@ -60,6 +61,9 @@
       <Project>{326435C6-5DFA-4895-8CE2-CC4BCB5CC485}</Project>
       <Name>APIMusica.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XMLSchema1.xsd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

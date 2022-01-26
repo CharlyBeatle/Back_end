@@ -9,6 +9,7 @@ namespace APIMusica.Business.Clases
     public class ClsUsuario
     {
         private UsuarioDao usuarioDao = new UsuarioDao();
+        private PerfilDao perfilDao = new PerfilDao();
         public List<UsuarioDTO> getList()
         {
             List<UsuarioDTO> list = new List<UsuarioDTO>();
@@ -18,9 +19,10 @@ namespace APIMusica.Business.Clases
                 var usuario = new UsuarioDTO
                 {
                     idUsuario = item.IdUsuario,
-                    nombre = string.Format("{0} {1}", item.Nombres, item.Apellidos),
+                    nombre = string.Format("{0}", item.Nombres),
                     idPerfil = item.IdPerfil,
-                    nombrePerfil = item.Perfil.Descripcion,
+                    correo = item.Correo,
+                    nombrePerfil = perfilDao.GetPerfil(item.IdPerfil).Descripcion,
                     password = item.Password,
                     estado = item.Estado
                 };
@@ -40,9 +42,9 @@ namespace APIMusica.Business.Clases
                 usuario = new UsuarioDTO
                 {
                     idUsuario = item.IdUsuario,
-                    nombre = string.Format("{0} {1}", item.Nombres, item.Apellidos),
+                    nombre = string.Format("{0}", item.Nombres),
                     idPerfil = item.IdPerfil,
-                    nombrePerfil = item.Perfil.Descripcion,
+                    nombrePerfil = perfilDao.GetPerfil(item.IdPerfil).Descripcion,
                     password = item.Password,
                     estado = item.Estado
                 };
@@ -57,6 +59,7 @@ namespace APIMusica.Business.Clases
                 IdUsuario = usuario.idUsuario,
                 IdPerfil = usuario.idPerfil,
                 Nombres = usuario.nombre,
+                Apellidos = usuario.nombre,
                 Correo = usuario.correo,
                 Estado = usuario.estado,
                 Password = usuario.password

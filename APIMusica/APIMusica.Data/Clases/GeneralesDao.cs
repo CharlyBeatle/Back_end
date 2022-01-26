@@ -30,5 +30,15 @@ namespace APIMusica.Data.Clases
 
             return result;
         }
+
+
+        public Nivel GetNivelById(short id)
+        {
+            var result = new List<Nivel>();
+            using (var context = new MusicaEntities())
+            {
+                return context.Nivel.FirstOrDefault(x => x.IdNivel == id);
+            }
+        }
     }
 }

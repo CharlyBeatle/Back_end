@@ -9,14 +9,14 @@ namespace APIMusica.Data.Clases
 {
     public class DictadoDao
     {
-        List<Dictado> GetDictados(string user)
+        public List<Dictado> GetDictados(string user)
         {
             var result = new List<Dictado>();
             try
             {
                 using(var context = new MusicaEntities())
                 {
-                    result= context.Dictado.Where(x => x.IdUsuario == user).ToList();
+                    result= context.Dictado.Where(x => x.IdUsuario == user).OrderByDescending(s=> s.Fecha).ToList();
                 }
             }
             catch (Exception)
@@ -28,7 +28,7 @@ namespace APIMusica.Data.Clases
             return result;
         }
 
-        Dictado GetDictado(int idDictado)
+        public Dictado GetDictado(int idDictado)
         {
             Dictado result = new Dictado();
             try
@@ -47,7 +47,7 @@ namespace APIMusica.Data.Clases
             return result;
         }
 
-        void SaveDictado(Dictado model)
+        public void SaveDictado(Dictado model)
         {
             try
             {

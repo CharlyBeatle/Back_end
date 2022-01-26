@@ -3,6 +3,7 @@
     #region Librerias
     using APIMusica.Business.DTO;
     using APIMusica.Business.Enums;
+    using APIMusica.Data.Clases;
     using System;
     using System.Collections.Generic;
     #endregion
@@ -10,6 +11,8 @@
     {
         #region Variables y Propiedades
         private Random random = new Random();
+        private DictadoDao dictadoDao = new DictadoDao();
+        private GeneralesDao generalesDao = new GeneralesDao();
         #endregion
 
         #region Métodos y Funciones
@@ -30,18 +33,19 @@
             dictado.CantidadCompas = cantidadCompas;
             var nota = GenerarNota();
             dictado.Nota = nota;
-            dictado.TextoDictado = string.Format("M: {0} \n| ",dictado.Metrica);
+            dictado.TextoDictado = string.Format("M: {0} \n| ", dictado.Metrica);
             for (int i = 0; i < cantidadCompas; i++)
             {
                 var compas = GenerarCompas(nota, metrica);
                 dictado.Compas.Add(compas);
-                if(i == 0)
+                if (i == 0)
                 {
                     dictado.TextoDictado = string.Format("{0}{1}", dictado.TextoDictado, compas);
-                } else
+                }
+                else
                 {
                     dictado.TextoDictado = string.Format("{0}|{1}", dictado.TextoDictado, compas);
-                }          
+                }
             }
             dictado.TextoDictado = string.Format("{0}|", dictado.TextoDictado);
             return dictado;
@@ -125,7 +129,7 @@
             while (conteo != total)
             {
                 fig = metrica.Figuras[random.Next(0, metrica.Figuras.Count - 1)];
-                notaCompas = string.Format("{0}{1}",nota, (int)fig.IndiceFigura);
+                notaCompas = string.Format("{0}{1}", nota, (int)fig.IndiceFigura);
                 if (fig.IndiceFigura != FiguraEnum.BlancaPuntillo && fig.IndiceFigura != FiguraEnum.NegraPuntillo)
                 {
                     notaCompas = string.Format("{0}{1}", random.Next(0, 1) == 1 ? NotaEnum.Silencio : nota, (int)fig.IndiceFigura);
@@ -140,10 +144,6 @@
             return compas;
         }
 
-        private bool EvaluarNota()
-        {
-            return true;
-        }
 
         /// <summary>
         /// Función que establece la cantidad de compases que tendra el dictado, deacuerdo a su dificultad
@@ -164,6 +164,66 @@
 
             }
             return cantidad;
+        }
+
+        /// <summary>
+        /// Función que realiza el guardado del resultado de un dictado
+        /// </summary>
+        /// <param name="dictado"></param>
+        /// <returns></returns>
+        public bool GuardarDictado(DictadoRespuesta dictado)
+        {
+            try
+            {
+                Data.Model.Dictado obj = new Data.Model.Dictado
+                {
+                    Calificacion = dictado.calificacion,
+                    Fecha = dictado.fecha,
+                    IdUsuario = dictado.usuario,
+                    Nivel = dictado.idTipo,
+                    Original = dictado.detalle.dictadoOriginal,
+                    Respuesta = dictado.detalle.dictadoRespuesta
+                };
+                dictadoDao.SaveDictado(obj);
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
+        public List<DictadoRespuesta> ConsultatDictadosUsuario(string idUsuario)
+        {
+            List<DictadoRespuesta> list = new List<DictadoRespuesta>();
+            var dictados = dictadoDao.GetDictados(idUsuario);
+            foreach (var item in dictados)
+            {
+                DictadoRespuesta dictado =
+                new DictadoRespuesta
+                {
+                    calificacion = item.Calificacion,
+                    detalle = new DetalleDictadoRespuesta
+                    {
+                        dictadoOriginal = item.Original,
+                        dictadoRespuesta = item.Respuesta
+                    },
+                    fecha = item.Fecha,
+                    idTipo = item.Nivel,
+                    usuario = item.IdUsuario,
+                    tipo = generalesDao.GetNivelById(item.Nivel).Descripcion
+                };
+                list.Add(dictado);
+            }
+            return list;
         }
 
         #endregion
