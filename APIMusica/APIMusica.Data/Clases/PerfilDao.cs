@@ -50,7 +50,7 @@ namespace APIMusica.Data.Clases
             using (var context = new MusicaEntities())
             {
                 var perfil = context.Perfil.FirstOrDefault(x => x.IdPerfil == model.IdPerfil);
-                if (perfil.IdPerfil != 0)
+                if (perfil != null)
                 {
                     perfil.Descripcion = model.Descripcion;
                 }

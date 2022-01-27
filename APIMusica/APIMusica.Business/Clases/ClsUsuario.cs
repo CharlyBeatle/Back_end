@@ -38,16 +38,41 @@ namespace APIMusica.Business.Clases
             var item = usuarioDao.GetUsuario(id);
             if (item != null)
             {
-
+                var perfil = perfilDao.GetPerfil(item.IdPerfil);
                 usuario = new UsuarioDTO
                 {
                     idUsuario = item.IdUsuario,
                     nombre = string.Format("{0}", item.Nombres),
                     idPerfil = item.IdPerfil,
-                    nombrePerfil = perfilDao.GetPerfil(item.IdPerfil).Descripcion,
+                    nombrePerfil = perfil.Descripcion,
+                    tipo = perfil.Tipo,
                     password = item.Password,
                     estado = item.Estado
                 };
+            }
+            return usuario;
+        }
+
+        public UsuarioDTO validateLogin(string user, string password)
+        {
+            UsuarioDTO usuario = new UsuarioDTO();
+            var item = usuarioDao.GetUsuarioByUserPassword(user,password);
+            if (item != null)
+            {
+                var perfil = perfilDao.GetPerfil(item.IdPerfil);
+                usuario = new UsuarioDTO
+                {
+                    idUsuario = item.IdUsuario,
+                    nombre = string.Format("{0}", item.Nombres),
+                    idPerfil = item.IdPerfil,
+                    nombrePerfil = perfil.Descripcion,
+                    tipo = perfil.Tipo,
+                    password = item.Password,
+                    estado = item.Estado
+                };
+            } else
+            {
+                usuario = null;
             }
             return usuario;
         }

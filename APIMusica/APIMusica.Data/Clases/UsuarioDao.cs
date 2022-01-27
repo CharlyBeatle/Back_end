@@ -47,6 +47,25 @@ namespace APIMusica.Data.Clases
             return result;
         }
 
+        public Usuario GetUsuarioByUserPassword(string user, string password)
+        {
+            Usuario result = new Usuario();
+            try
+            {
+                using (var context = new MusicaEntities())
+                {
+                    result = context.Usuario.FirstOrDefault(x => x.IdUsuario == user && x.Password == password);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return result;
+        }
+
         public void SaveUsuario(Usuario model)
         {
             using (var context = new MusicaEntities())

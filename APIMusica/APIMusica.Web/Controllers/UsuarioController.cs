@@ -38,5 +38,13 @@ namespace APIMusica.Web.Controllers
             usuario.SaveUsuario(model);
             return Json("");
         }
+
+        [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+        [HttpGet]
+        public IHttpActionResult ValidateLogin(string user, string password)
+        {
+            var result = usuario.validateLogin(user,password);
+            return Json(result);
+        }
     }
 }

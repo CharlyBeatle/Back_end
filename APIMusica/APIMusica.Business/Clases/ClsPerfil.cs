@@ -22,6 +22,7 @@ namespace APIMusica.Business.Clases
                 {
                     idPerfil = item.IdPerfil,
                     nombre = item.Descripcion,
+                    Tipo = item.Tipo,
                     estado = true
                 };
 
@@ -41,6 +42,7 @@ namespace APIMusica.Business.Clases
                 {
                     idPerfil = item.IdPerfil,
                     nombre = item.Descripcion,
+                    Tipo = item.Tipo,
                     estado = true
                 };
             }
@@ -52,6 +54,7 @@ namespace APIMusica.Business.Clases
             var model = new Perfil
             {
                 IdPerfil = (short)perfil.idPerfil,
+                Tipo = perfil.Tipo,
                 Descripcion = perfil.nombre
             };
 

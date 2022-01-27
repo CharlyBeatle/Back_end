@@ -10,6 +10,7 @@ namespace APIMusica.Business.DTO
     {
         public int idPerfil { get; set; }
         public string nombre { get; set; }
+        public string Tipo { get; set; }
         public bool estado { get; set; }
     }
 }
